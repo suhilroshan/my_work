@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suhil Roshan · Lead Data Scientist</title>
+<meta name="description" content="Suhil Roshan, Lead Data Scientist. Every industry has an expensive event it wishes it had seen coming. I build the models that see it, and run them in production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  /* Search this file for "EDIT" to change links and numbers. */
+  :root{
+    --paper:#EEF2F4; --panel:#FFFFFF; --ink:#14222E; --muted:#556572;
+    --rule:#C6D1D8; --steel:#2F6F8F; --steel-soft:#DCE8EE;
+    --amber:#D98E04; --amber-soft:#F6E3B8; --measure:66ch;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4,.sans,button,.btn,nav{font-family:"Archivo",system-ui,sans-serif;font-stretch:86%}
+  a{color:var(--steel);text-underline-offset:3px}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:3px}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+
+  /* Top bar */
+  .top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .name{font-family:"Archivo",sans-serif;font-weight:700;font-size:1.05rem;color:var(--ink);text-decoration:none}
+  .top nav a{font-size:.95rem;margin-left:22px;color:var(--ink);text-decoration:none}
+  .top nav a:hover{color:var(--steel);text-decoration:underline}
+
+  /* Hero */
+  .hero{padding:44px 0 18px;max-width:900px}
+  .hero h1{font-size:clamp(2.3rem,5.4vw,4.3rem);line-height:1.02;font-weight:800;letter-spacing:-.025em;margin:0 0 20px;font-stretch:78%}
+  .hero h1 .soft{color:var(--steel)}
+  .hero p{max-width:58ch;color:var(--muted);margin:0;font-size:1.15rem}
+
+  /* Industry lens: the one memorable element */
+  .lens{margin:40px 0 28px;background:var(--panel);border:1px solid var(--rule);border-radius:8px;overflow:hidden}
+  .lens-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--rule);background:#F7F9FA}
+  .lens-bar .ask{font-family:"Archivo",sans-serif;font-weight:600;margin-right:6px;font-size:1rem}
+  .lens-bar button{font-size:.95rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1.5px solid var(--rule);background:#fff;color:var(--ink);cursor:pointer}
+  .lens-bar button:hover{border-color:var(--steel);color:var(--steel)}
+  .lens-bar button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .lens-body{display:grid;grid-template-columns:1.1fr 1fr;gap:0}
+  .lens-left{padding:30px 32px;border-right:1px solid var(--rule)}
+  .lens-left h2{font-size:clamp(1.45rem,2.6vw,1.95rem);line-height:1.15;font-weight:750;margin:0 0 18px;letter-spacing:-.015em}
+  .lens-left dl{margin:0}
+  .lens-left dt{font-family:"Archivo",sans-serif;font-weight:700;font-size:.98rem;margin-top:14px}
+  .lens-left dt:first-child{margin-top:0}
+  .lens-left dd{margin:2px 0 0;color:var(--ink)}
+  .lens-right{padding:30px 32px;background:var(--steel-soft)}
+  .lens-right h3{font-size:1.05rem;font-weight:700;margin:0 0 14px}
+  .proof{list-style:none;margin:0;padding:0}
+  .proof li{padding:12px 0 12px 16px;border-left:3px solid var(--amber);margin-bottom:12px;background:rgba(255,255,255,.55);border-radius:0 4px 4px 0;padding-right:12px}
+  .proof strong{display:block;font-family:"Archivo",sans-serif;font-size:1.35rem;font-weight:800;line-height:1.1;letter-spacing:-.01em}
+  .proof span{font-size:.98rem;color:var(--ink)}
+  .lens-right .jump{display:inline-block;margin-top:6px;font-family:"Archivo",sans-serif;font-weight:600}
+  @media (prefers-reduced-motion:no-preference){ .lens-body.swap{animation:swap .35s ease-out} @keyframes swap{from{opacity:.25}to{opacity:1}} }
+
+  .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{font-weight:600;font-size:1rem;padding:12px 20px;border-radius:4px;text-decoration:none;display:inline-block}
+  .btn.primary{background:var(--ink);color:#fff}
+  .btn.primary:hover{background:var(--steel)}
+  .btn.ghost{color:var(--ink);border:1.5px solid var(--ink)}
+  .btn.ghost:hover{border-color:var(--steel);color:var(--steel)}
+
+  /* Readout */
+  .readout{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:26px 0;margin:48px 0 72px}
+  .readout p{margin:0;font-family:"Archivo",sans-serif;font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.5;font-stretch:90%}
+  .readout b{font-weight:700;background:linear-gradient(transparent 62%,var(--amber-soft) 62%)}
+
+  section{margin-bottom:80px}
+  h2.sec{font-size:clamp(1.7rem,3vw,2.35rem);font-weight:750;letter-spacing:-.015em;margin:0 0 8px;line-height:1.1}
+  .intro{color:var(--muted);max-width:var(--measure);margin:0 0 32px}
+
+  /* How I work: a genuine sequence */
+  .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s;border-top:2px solid var(--ink)}
+  .steps li{counter-increment:s;padding:18px 18px 0 0}
+  .steps li::before{content:counter(s);display:block;font-family:"Archivo",sans-serif;font-weight:800;font-size:1.6rem;color:var(--steel);line-height:1;margin-bottom:10px}
+  .steps h3{font-size:1.08rem;font-weight:700;margin:0 0 6px;line-height:1.25}
+  .steps p{margin:0;color:var(--muted);font-size:.98rem;line-height:1.55}
+
+  /* Case studies */
+  .case{display:grid;grid-template-columns:290px 1fr;gap:44px;padding:34px 0;border-top:1px solid var(--rule);scroll-margin-top:20px}
+  .case:last-of-type{border-bottom:1px solid var(--rule)}
+  .case h3{font-size:1.45rem;font-weight:750;line-height:1.18;margin:0 0 10px;letter-spacing:-.01em}
+  .where{font-family:"Archivo",sans-serif;font-size:.93rem;color:var(--muted);margin:0}
+  .outcome{margin-top:18px;padding-left:14px;border-left:3px solid var(--amber)}
+  .outcome strong{display:block;font-family:"Archivo",sans-serif;font-size:2.05rem;font-weight:800;line-height:1;letter-spacing:-.02em;font-stretch:80%}
+  .outcome span{font-family:"Archivo",sans-serif;font-size:.9rem;color:var(--muted)}
+  .relates{margin-top:16px;font-family:"Archivo",sans-serif;font-size:.9rem;color:var(--muted)}
+  .relates b{color:var(--ink);font-weight:600}
+  .case dl{margin:0;max-width:var(--measure)}
+  .case dt{font-family:"Archivo",sans-serif;font-weight:700;font-size:1rem;margin-top:15px}
+  .case dt:first-child{margin-top:0}
+  .case dd{margin:2px 0 0}
+  .case dd.hard{background:var(--amber-soft);padding:10px 14px;border-radius:4px;margin-top:6px}
+
+  .more{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 36px;margin-top:36px}
+  .more h4{font-size:1.08rem;font-weight:700;margin:0 0 4px}
+  .more p{margin:0;color:var(--muted);font-size:1rem}
+
+  /* Experience */
+  .timeline{list-style:none;margin:0;padding:0;max-width:840px}
+  .timeline li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:16px 0;border-top:1px solid var(--rule)}
+  .when{font-family:"Archivo",sans-serif;color:var(--muted);font-size:.95rem}
+  .timeline h3{font-size:1.12rem;font-weight:700;margin:0}
+  .timeline p{margin:2px 0 0;color:var(--muted);font-size:1rem}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:52px}
+  .skills{margin:0}
+  .skills div{padding:10px 0;border-top:1px solid var(--rule)}
+  .skills dt{font-family:"Archivo",sans-serif;font-weight:700;font-size:.98rem}
+  .skills dd{margin:2px 0 0;color:var(--muted)}
+  .beyond ul{margin:0;padding-left:1.1em}
+  .beyond li{margin-bottom:10px}
+
+  .contact{background:var(--ink);color:#fff;border-radius:8px;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
+  .contact h2{color:#fff;margin:0 0 8px;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:750}
+  .contact p{margin:0;color:#B9C6CF;max-width:52ch}
+  .contact .btn.primary{background:var(--amber);color:var(--ink)}
+  .contact .btn.primary:hover{background:#F0A824}
+  .contact .btn.ghost{color:#fff;border-color:#fff}
+  footer{padding:30px 0 40px;font-family:"Archivo",sans-serif;font-size:.88rem;color:var(--muted)}
+
+  @media (max-width:980px){ .steps{grid-template-columns:1fr 1fr;row-gap:22px} .more{grid-template-columns:1fr 1fr} }
+  @media (max-width:860px){
+    .lens-body{grid-template-columns:1fr}
+    .lens-left{border-right:0;border-bottom:1px solid var(--rule)}
+    .case{grid-template-columns:1fr;gap:16px}
+    .two,.more{grid-template-columns:1fr}
+    .timeline li{grid-template-columns:1fr;gap:4px}
+    .contact{padding:32px}
+  }
+  @media (max-width:560px){
+    .steps{grid-template-columns:1fr}
+    .lens-left,.lens-right{padding:22px 20px}
+    .lens-bar{padding:14px 16px}
+    .top nav a{margin-left:14px} .top nav a.hide-sm{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="name" href="#">Suhil Roshan</a>
+  <nav aria-label="Main">
+    <a href="#work">Work</a>
+    <a class="hide-sm" href="#how">How I work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="headline" style="margin-bottom:0">
+    <h1 id="headline">Every industry has an expensive event it wishes it had seen coming. I build the models that see it.</h1>
+    <p>Lead Data Scientist, 8 years. I predict rare, costly events (failures, defaults, churn, risk) and take the models all the way into production, where they save real money.</p>
+  </section>
+
+  <!-- Industry lens -->
+  <div class="lens" aria-labelledby="lens-title">
+    <div class="lens-bar" role="group" aria-label="Choose your industry">
+      <span class="ask" id="lens-ask">See it in your industry:</span>
+      <button type="button" data-k="banking" aria-pressed="true">Banking &amp; fintech</button>
+      <button type="button" data-k="energy" aria-pressed="false">Energy &amp; utilities</button>
+      <button type="button" data-k="manufacturing" aria-pressed="false">Manufacturing</button>
+      <button type="button" data-k="retail" aria-pressed="false">Retail</button>
+      <button type="button" data-k="insurance" aria-pressed="false">Insurance</button>
+      <button type="button" data-k="health" aria-pressed="false">Healthcare</button>
+    </div>
+    <div class="lens-body" id="lens-body" aria-live="polite">
+      <div class="lens-left">
+        <h2 id="lens-title">In banking, the expensive surprise is a loan that defaults or a payment that turns out to be fraud.</h2>
+        <dl>
+          <dt>The signal hiding in your data</dt>
+          <dd id="l-signal">Shifts in repayment behaviour, balances and transaction patterns, weeks before the loss shows up.</dd>
+          <dt>What I'd build for you</dt>
+          <dd id="l-build">Early-warning risk scores with plain-language reason codes your credit and risk teams can act on, monitored for drift so they stay accurate.</dd>
+        </dl>
+      </div>
+      <div class="lens-right">
+        <h3>Proof from work I've already shipped</h3>
+        <ul class="proof" id="l-proof">
+          <li><strong>+12% AUC</strong><span>on a production risk model, with SHAP reason codes underwriters used (insurance)</span></li>
+          <li><strong>$600K retained</strong><span>by predicting who would leave and proving it with an A/B test (insurance)</span></li>
+          <li><strong>Banking client</strong><span>data pipelines and customer segmentation that sharpened campaign targeting</span></li>
+        </ul>
+        <a class="jump" id="l-jump" href="#case-churn">Read the closest case study</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <a class="btn primary" href="#work">See my work</a>
+    <!-- EDIT: put your CV next to index.html with this exact name -->
+    <a class="btn ghost" href="Suhil_Roshan_Resume.pdf">Download CV</a>
+  </div>
+
+  <!-- EDIT: keep these numbers identical to your CV -->
+  <div class="readout">
+    <p><b>$1.2M+</b> in business value delivered across <b>6+</b> enterprise clients. <b>12+</b> models in production, serving <b>1M+</b> predictions a day. <b>500+</b> professionals mentored in AI.</p>
+  </div>
+
+  <section id="how" aria-labelledby="how-h">
+    <h2 class="sec" id="how-h">How I work</h2>
+    <p class="intro">The same five steps, whatever the industry. Most failed ML projects skip the first and the last.</p>
+    <ol class="steps">
+      <li><h3>Frame the decision</h3><p>Agree what a miss costs against a false alarm, and what a win is worth, before writing code.</p></li>
+      <li><h3>Find the signal</h3><p>Turn messy logs, telemetry and transactions into features that move ahead of the event.</p></li>
+      <li><h3>Build for rare events</h3><p>Models tuned for imbalanced data, judged on catch rate and precision, not accuracy.</p></li>
+      <li><h3>Run it in production</h3><p>Pipelines, versioning, CI/CD and drift monitoring that triggers retraining.</p></li>
+      <li><h3>Prove the money</h3><p>Control groups and business metrics, so the value is measured, not assumed.</p></li>
+    </ol>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <h2 class="sec" id="work-h">Selected work</h2>
+    <p class="intro">Three projects in depth: the decision each one supported, the hard part, and what it delivered.</p>
+
+    <article class="case" id="case-maintenance">
+      <div>
+        <h3>Catching device component failures 7–14 days ahead</h3>
+        <p class="where">Fortune 500 PC manufacturer · at Sutherland</p>
+        <div class="outcome"><strong>~$500K a year</strong><span>estimated savings from 15% fewer warranty claims</span></div>
+        <p class="relates"><b>Same pattern in:</b> energy assets, telecom networks, fleets, data centres</p>
+      </div>
+      <dl>
+        <dt>The decision</dt>
+        <dd>Which devices should the service team fix before they break at the customer's desk?</dd>
+        <dt>The hard part</dt>
+        <dd class="hard">Failures are rare, so a model can look accurate while missing almost all of them. I agreed the real trade-off with the client up front: the cost of a missed failure against the cost of a false alarm.</dd>
+        <dt>What I built</dt>
+        <dd>Drift-adaptive gradient-boosted models (XGBoost, LightGBM) on features from 500GB+ of device logs a day, processed with PySpark on Databricks. I owned the solution architecture and led the team that delivered it.</dd>
+        <dt>Result</dt>
+        <dd>83% precision, 7–14 days ahead. Scores 250K+ devices (1M+ component predictions) daily in production, with MLflow, CI/CD and drift monitoring. Warranty claims fell 15% and customer satisfaction rose 10%.</dd>
+      </dl>
+    </article>
+
+    <article class="case" id="case-churn">
+      <div>
+        <h3>Turning churn risk into retained premium</h3>
+        <p class="where">Insurance · at Duck Creek Technologies</p>
+        <div class="outcome"><strong>$600K</strong><span>annual premium retained, churn down 18%</span></div>
+        <p class="relates"><b>Same pattern in:</b> banking attrition, credit risk, subscriptions, telecom</p>
+      </div>
+      <dl>
+        <dt>The decision</dt>
+        <dd>Which policyholders should retention teams contact, and what should they say?</dd>
+        <dt>The hard part</dt>
+        <dd class="hard">A risk score alone doesn't change behaviour. Underwriters needed to see why a customer was at risk, and leadership needed proof the campaigns worked rather than a correlation.</dd>
+        <dt>What I built</dt>
+        <dd>Risk and churn models that improved AUC by 12% over production, with SHAP reason codes for each customer, and a ranked list of at-risk policyholders for the retention teams.</dd>
+        <dt>Result</dt>
+        <dd>A/B tested against a control group: churn fell 18% in six months, renewals rose 22%, and $600K in annual premium was retained.</dd>
+      </dl>
+    </article>
+
+    <article class="case" id="case-copilot">
+      <div>
+        <h3>An AI copilot for 1,500 employees</h3>
+        <p class="where">Global health organisation · at PATH</p>
+        <div class="outcome"><strong>~600 hours</strong><span>saved every month, support dependency down 40%</span></div>
+        <p class="relates"><b>Same pattern in:</b> bank operations, policy and compliance teams, internal helpdesks</p>
+      </div>
+      <dl>
+        <dt>The decision</dt>
+        <dd>How do 1,500 people get reliable answers from policy, finance and HR documents without waiting on a support team?</dd>
+        <dt>The hard part</dt>
+        <dd class="hard">An assistant that answers confidently but wrongly is worse than none. Answers had to come from the organisation's own documents.</dd>
+        <dt>What I built</dt>
+        <dd>A retrieval-augmented (RAG) copilot on Azure OpenAI and LangChain that answers from the organisation's own documents.</dd>
+        <dt>Result</dt>
+        <dd>Support-team dependency fell 40% across 1,500+ employees, about 600 hours saved a month. I also led the organisation's move to Microsoft Fabric as its single data and AI platform.</dd>
+      </dl>
+    </article>
+
+    <div class="more">
+      <div id="case-refrigeration">
+        <h4>Refrigeration failure prediction</h4>
+        <p>Flagged supermarket refrigeration failures 72 hours ahead at 88% recall across 120 stores: anomaly detection plus a gradient-boosted risk score on 5-minute IoT telemetry from 3,000+ units.</p>
+      </div>
+      <div id="case-vaccine">
+        <h4>Vaccine demand forecasting</h4>
+        <p>Demand-forecasting and allocation models that cut vaccine wastage by 18%, saving $150K across global health programmes.</p>
+      </div>
+      <div id="case-typhoid">
+        <h4>Disease risk forecasting</h4>
+        <p>Forecast high-risk typhoid regions with 85% accuracy from incidence, environmental and immunisation data, so programmes could act before outbreaks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="exp-h">
+    <h2 class="sec" id="exp-h">Experience</h2>
+    <p class="intro">From backend engineering into data science, then into leading delivery.</p>
+    <ol class="timeline">
+      <li><span class="when">2025 – now</span><div><h3>Associate Manager, Data Science · Sutherland</h3><p>Lead the data team, own solution architecture and client delivery, and run pre-sales solutioning for new use cases.</p></div></li>
+      <li><span class="when">2024 – 2025</span><div><h3>Data Scientist · PATH</h3><p>RAG copilot, demand forecasting, and the organisation-wide data platform move.</p></div></li>
+      <li><span class="when">2022 – 2024</span><div><h3>Senior Analyst, Machine Learning · Duck Creek Technologies</h3><p>Risk and churn modelling for insurance, proven with A/B tests.</p></div></li>
+      <li><span class="when">2021 – 2022</span><div><h3>Software Engineer · Virtusa</h3><p>Data pipelines and customer segmentation for a banking client.</p></div></li>
+      <li><span class="when">2018 – 2021</span><div><h3>Junior Software Engineer · Relevantz</h3><p>Backend services in C#/.NET and SQL, and my first data automation in Python.</p></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="skills-h">
+    <div class="two">
+      <div>
+        <h2 class="sec" id="skills-h">Toolkit</h2>
+        <dl class="skills">
+          <div><dt>Machine learning</dt><dd>XGBoost, LightGBM, anomaly detection, time-series forecasting, drift detection, SHAP, A/B testing</dd></div>
+          <div><dt>GenAI</dt><dd>RAG, LLM copilots, LangChain, Azure OpenAI</dd></div>
+          <div><dt>Production</dt><dd>Databricks, PySpark, MLflow, Docker, Azure ML, CI/CD, Grafana</dd></div>
+          <div><dt>Industries</dt><dd>Banking and financial services, insurance, manufacturing, retail, energy-style IoT telemetry, global health</dd></div>
+        </dl>
+      </div>
+      <div class="beyond">
+        <h2 class="sec">Beyond delivery</h2>
+        <ul>
+          <li>Mentored 500+ professionals in AI and data science through workshops and 1:1 career guidance.</li>
+          <li>IEEE paper (under review): <em>Drift-Adaptive Gradient Boosting for Component Failure Prediction on Imbalanced Device Telemetry.</em></li>
+          <li>Speaker, Recent Trends in Data Sciences 2024, SRM University.</li>
+          <li>Microsoft Certified: Azure AI Engineer. Databricks Certified Machine Learning Professional.</li>
+          <li>M.S. in Artificial Intelligence, SRM University.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <div class="contact">
+      <div>
+        <h2 id="contact-h">What's the event your business can't afford to miss?</h2>
+        <p>I'm open to lead data science and applied AI roles. Email is the quickest way to reach me.</p>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="mailto:suhilroshan010@gmail.com">Email me</a>
+        <!-- EDIT: your LinkedIn URL -->
+        <a class="btn ghost" href="https://www.linkedin.com/in/your-profile">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Suhil Roshan</footer>
+</div>
+
+<script>
+const lenses = {
+  banking: {
+    title: "In banking, the expensive surprise is a loan that defaults or a payment that turns out to be fraud.",
+    signal: "Shifts in repayment behaviour, balances and transaction patterns, weeks before the loss shows up.",
+    build: "Early-warning risk scores with plain-language reason codes your credit and risk teams can act on, monitored for drift so they stay accurate.",
+    proof: [["+12% AUC","on a production risk model, with SHAP reason codes underwriters used (insurance)"],["$600K retained","by predicting who would leave and proving it with an A/B test (insurance)"],["Banking client","data pipelines and customer segmentation that sharpened campaign targeting"]],
+    jump: "#case-churn"
+  },
+  energy: {
+    title: "In energy, the expensive surprise is a pump, compressor or turbine that fails and forces an unplanned shutdown.",
+    signal: "Small drifts in pressure, temperature, vibration and current in the sensor telemetry, days before the breakdown.",
+    build: "Anomaly detection plus failure-risk scores with enough lead time for maintenance crews to plan the repair, instead of reacting to it.",
+    proof: [["72 hours ahead","refrigeration failures flagged at 88% recall from 5-minute IoT telemetry on 3,000+ units"],["7–14 days ahead","device component failures predicted at 83% precision, 1M+ predictions a day"],["Drift-adaptive","models that retrain when equipment behaviour shifts"]],
+    jump: "#case-maintenance"
+  },
+  manufacturing: {
+    title: "In manufacturing, the expensive surprise is a component that fails in the field and turns into a warranty claim.",
+    signal: "Error codes, usage patterns and device logs that change before a part gives out.",
+    build: "Failure-prediction models that tell service teams which units to fix first, running daily in production.",
+    proof: [["~$500K a year","estimated savings for a Fortune 500 PC manufacturer"],["15% fewer","warranty repair and replacement claims"],["250K+ devices","scored every day in production"]],
+    jump: "#case-maintenance"
+  },
+  retail: {
+    title: "In retail, the expensive surprise is spoiled stock from a failed fridge, or a loyal customer who quietly stops coming back.",
+    signal: "Equipment telemetry in stores, and shifts in purchase frequency and basket behaviour.",
+    build: "Store-level failure alerts for maintenance teams, and churn and segmentation models that point campaigns at the right customers.",
+    proof: [["120 stores","refrigeration failures flagged 72 hours ahead at 88% recall"],["$1.2M a year","in avoidable spoilage and call-outs sized for the business case"],["Segmentation","models that sharpened campaign targeting"]],
+    jump: "#case-refrigeration"
+  },
+  insurance: {
+    title: "In insurance, the expensive surprise is a policyholder who lapses, or a risk that was priced too low.",
+    signal: "Claims history, property and location features, and changes in customer engagement.",
+    build: "Explainable risk and churn models with reason codes underwriters can use, proven with controlled experiments.",
+    proof: [["+12% AUC","on the production risk model"],["18% less churn","and 22% more renewals in six months"],["$600K","annual premium retained"]],
+    jump: "#case-churn"
+  },
+  health: {
+    title: "In healthcare, the expensive surprise is an outbreak you didn't prepare for, or vaccines that expire on the shelf.",
+    signal: "Disease incidence, environmental data, immunisation records and demand patterns by region.",
+    build: "Risk forecasts and demand models that put resources where they're needed before the crisis.",
+    proof: [["18% less wastage","from vaccine demand forecasting and allocation, $150K saved"],["85% accuracy","forecasting high-risk typhoid regions"],["1,500 staff","served by a RAG copilot, about 600 hours saved a month"]],
+    jump: "#case-vaccine"
+  }
+};
+const body = document.getElementById('lens-body');
+const btns = document.querySelectorAll('.lens-bar button');
+btns.forEach(b => b.addEventListener('click', () => {
+  const d = lenses[b.dataset.k];
+  btns.forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+  document.getElementById('lens-title').textContent = d.title;
+  document.getElementById('l-signal').textContent = d.signal;
+  document.getElementById('l-build').textContent = d.build;
+  const ul = document.getElementById('l-proof'); ul.innerHTML = '';
+  d.proof.forEach(([k,v]) => { const li=document.createElement('li'); const s=document.createElement('strong'); s.textContent=k; const sp=document.createElement('span'); sp.textContent=v; li.append(s,sp); ul.append(li); });
+  document.getElementById('l-jump').setAttribute('href', d.jump);
+  body.classList.remove('swap'); void body.offsetWidth; body.classList.add('swap');
+}));
+</script>
+</body>
+</html>
